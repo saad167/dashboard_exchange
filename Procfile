@@ -1,1 +1,1 @@
-web: gunicorn DataViz:server
+wsgi: gunicorn DataViz:server
