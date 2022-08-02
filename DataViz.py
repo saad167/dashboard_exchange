@@ -6,7 +6,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 import plotly.express as px
 import plotly.graph_objects as go
-from jupyter_dash import JupyterDash
+
 
 
 
@@ -15,7 +15,7 @@ p=p.drop('Unnamed: 7',axis=1)
 p=p.dropna()
 
 
-app = JupyterDash(__name__)
+app = Dash(__name__)
 
 
 
