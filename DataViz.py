@@ -14,6 +14,23 @@ p=pd.read_csv("./ExportData.csv",sep=";")
 p=p.drop('Unnamed: 7',axis=1)
 p=p.dropna()
 
+def entier(x):
+    #if type(x)==float :
+     #   return int(x)
+    #else:
+        l=""
+        for i in x :
+            if i == ",":
+                l=l+'.'
+            else :
+                l=l+i
+        return float(l) #int(l)
+
+p["Valeur DHS 2019"]=[entier(x) for x in p["Valeur DHS 2019"] ]
+p["Valeur DHS 2020"]=[entier(x) for x in p["Valeur DHS 2020"] ]
+p["Valeur DHS 2021"]=[entier(x) for x in p["Valeur DHS 2021"] ]
+p=p.rename(columns={"Valeur DHS 2019": "2019", "Valeur DHS 2020": "2020","Valeur DHS 2021":"2021"})
+
 
 app = dash.Dash(__name__)
 
