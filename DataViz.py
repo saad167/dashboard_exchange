@@ -15,7 +15,7 @@ p=p.drop('Unnamed: 7',axis=1)
 p=p.dropna()
 
 
-app = Dash(__name__)
+app = dash.Dash(__name__)
 
 
 
