@@ -35,7 +35,6 @@ p=p.rename(columns={"Valeur DHS 2019": "2019", "Valeur DHS 2020": "2020","Valeur
 app = dash.Dash(__name__)
 
 
-
 #################################################### APP COLOURS #####################################################
 
 colors = {
@@ -258,4 +257,4 @@ def generate_chart_1(pays_value,year_value):
 
 ####################################################################################################################
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run(debug=True)
